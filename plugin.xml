@@ -59,40 +59,4 @@
     <framework src="Security.framework"/>
     <framework src="SystemConfiguration.framework"/>
   </platform>
-  <platform name="android">
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="CordovaHttpPlugin">
-        <param name="android-package" value="com.silkimen.cordovahttp.CordovaHttpPlugin"/>
-      </feature>
-    </config-file>
-    <config-file target="AndroidManifest.xml" parent="/manifest">
-      <uses-permission android:name="android.permission.INTERNET"/>
-      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    </config-file>
-    <source-file src="src/android/com/silkimen/cordovahttp/CordovaClientAuth.java" target-dir="src/com/silkimen/cordovahttp"/>
-    <source-file src="src/android/com/silkimen/cordovahttp/CordovaHttpBase.java" target-dir="src/com/silkimen/cordovahttp"/>
-    <source-file src="src/android/com/silkimen/cordovahttp/CordovaHttpDownload.java" target-dir="src/com/silkimen/cordovahttp"/>
-    <source-file src="src/android/com/silkimen/cordovahttp/CordovaHttpOperation.java" target-dir="src/com/silkimen/cordovahttp"/>
-    <source-file src="src/android/com/silkimen/cordovahttp/CordovaHttpPlugin.java" target-dir="src/com/silkimen/cordovahttp"/>
-    <source-file src="src/android/com/silkimen/cordovahttp/CordovaHttpResponse.java" target-dir="src/com/silkimen/cordovahttp"/>
-    <source-file src="src/android/com/silkimen/cordovahttp/CordovaHttpUpload.java" target-dir="src/com/silkimen/cordovahttp"/>
-    <source-file src="src/android/com/silkimen/cordovahttp/CordovaObservableCallbackContext.java" target-dir="src/com/silkimen/cordovahttp"/>
-    <source-file src="src/android/com/silkimen/cordovahttp/CordovaServerTrust.java" target-dir="src/com/silkimen/cordovahttp"/>
-    <source-file src="src/android/com/silkimen/http/HttpBodyDecoder.java" target-dir="src/com/silkimen/http"/>
-    <source-file src="src/android/com/silkimen/http/HttpRequest.java" target-dir="src/com/silkimen/http"/>
-    <source-file src="src/android/com/silkimen/http/JsonUtils.java" target-dir="src/com/silkimen/http"/>
-    <source-file src="src/android/com/silkimen/http/KeyChainKeyManager.java" target-dir="src/com/silkimen/http"/>
-    <source-file src="src/android/com/silkimen/http/TLSConfiguration.java" target-dir="src/com/silkimen/http"/>
-    <source-file src="src/android/com/silkimen/http/TLSSocketFactory.java" target-dir="src/com/silkimen/http"/>
-  </platform>
-  <platform name="browser">
-    <config-file target="config.xml" parent="/*">
-      <feature name="CordovaHttpPlugin">
-        <param name="browser-package" value="CordovaHttpPlugin"/>
-      </feature>
-    </config-file>
-    <js-module src="src/browser/cordova-http-plugin.js" name="http-proxy">
-      <runs/>
-    </js-module>
-  </platform>
 </plugin>
